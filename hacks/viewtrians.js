@@ -28,7 +28,7 @@ fetch('/api/finduser', {method: 'POST', credentials: 'include', headers: { 'Acce
             })
             alert(`You are viewing ${username}'s trians`)
         } else {
-            alert('You need to be on the trians page.')
+            alert('You need to be on the trians page. The script will automatically run on the other tab.')
             const trianguletClient = window.open('/trians')
             capsules = await fetch('/data/trians', {credentials: 'include', headers: { 'Accept': 'application/json', 'authorization': triangulet.tokenraw, 'Content-Type': 'application/json' }}).then(x => {return x.json()})
             setTimeout(async () => {
