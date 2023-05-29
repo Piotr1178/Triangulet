@@ -1,7 +1,7 @@
 let trians = {}
 let color = {
     "Uncommon": "#4bc22e",
-    "Rare": "#4b8bc2",
+    "Rare": "#0a14fa",
     "Epic": "#be0000",
     "Legendary": "##ff910f",
     "Chroma": "#00ccff",
