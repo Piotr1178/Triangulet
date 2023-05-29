@@ -3,7 +3,7 @@ let color = {
     "Uncommon": "#4bc22e",
     "Rare": "#0a14fa",
     "Epic": "#be0000",
-    "Legendary": "##ff910f",
+    "Legendary": "#ff910f",
     "Chroma": "#00ccff",
     "Mystical": "#a335ee"
 }
