@@ -16,7 +16,7 @@ let color = {
     "Mystical": "#a335ee"
 }
 
-let rarity, trian
+let rarity, trian, chance
 let trianCapsule = 0
 
 function deleteOverlay() {
@@ -2758,7 +2758,7 @@ function openAnimation() {
                                             }
                                         }
                                     }, 320)
-        el2.innerHTML = `<img src="/media/capsules/${capsule}/background.png" alt="Background" class="styles__blookBackground___3rt4N-camelCase" draggable="false"><div class="styles__blookContainer___36LK2-camelCase styles__unlockedBlookImage___wC4gr-camelCase"><img src="/media/capsules/${trianCapsule}/trians/${trian}.png" draggable="false" class="styles__blook___1R6So-camelCase"></div><div class="styles__unlockedText___1diat-camelCase"><div class="styles__unlockedBlook___2pr1Z-camelCase" style="font-size: 40px;"><div style="font-family: Titan One,sans-serif;display: block; white-space: nowrap;color:#fff">${trian}</div></div><div class="styles__rarityText___1PfSA-camelCase" style="font-family: Titan One,sans-serif;color:${color[rarity]}">${rarity}</div></div><div class="styles__bottomText___3_k10-camelCase">69,420%</div><div class="styles__bottomShadow___10ZLG-camelCase"></div>`
+        el2.innerHTML = `<img src="/media/capsules/${capsule}/background.png" alt="Background" class="styles__blookBackground___3rt4N-camelCase" draggable="false"><div class="styles__blookContainer___36LK2-camelCase styles__unlockedBlookImage___wC4gr-camelCase"><img src="/media/capsules/${trianCapsule}/trians/${trian}.png" draggable="false" class="styles__blook___1R6So-camelCase"></div><div class="styles__unlockedText___1diat-camelCase"><div class="styles__unlockedBlook___2pr1Z-camelCase" style="font-size: 40px;"><div style="font-family: Titan One,sans-serif;display: block; white-space: nowrap;color:#fff">${trian}</div></div><div class="styles__rarityText___1PfSA-camelCase" style="font-family: Titan One,sans-serif;color:${color[rarity]}">${rarity}</div></div><div class="styles__bottomText___3_k10-camelCase">${chance}%</div><div class="styles__bottomShadow___10ZLG-camelCase"></div>`
         document.querySelector('.capsuleContainer').appendChild(el2)
         setTimeout(() => {
             deleteOverlay()
@@ -2792,6 +2792,7 @@ if (packOptions.includes(capsule)) {
                 if (packs['ValuesnCapsules'][i].name == capsule)
                     capsuleNum = i
             }
+            chance = prompt('What is the % chance to get this trian?')
             el = document.createElement('div')
             el.classList.add('capsuleContainer')
             console.log(packs['ValuesnCapsules'][capsuleNum]['colors'][1])
